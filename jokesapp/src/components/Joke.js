@@ -5,7 +5,6 @@ export default function Joke() {
 
   useEffect(() => {
     if (!navigator.onLine) {
-      console.log("offline");
       if (localStorage.getItem("joke") === null) setJoke("Loading...");
       else setJoke(localStorage.getItem("joke"));
     }
